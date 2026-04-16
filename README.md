@@ -11,8 +11,8 @@ This is a variant applicable to nonsymmetric linear systems. Here we do not have
 
 # Typical usage
 ```
- [x,berrhistory] = minberr(A,b,maxiter,tol); % if A is PSD
- [x,berrhistory] = minberrNE(A,b,maxiter,tol); % if A is nonsymmetric
+ [x,iter,berrhistory] = minberr(A,b,maxiter,1,tol); % if A is PSD
+ [x,iter,berrhistory] = minberrNE(A,b,maxiter,tol); % if A is nonsymmetric
 ``` 
 
 # Reference
