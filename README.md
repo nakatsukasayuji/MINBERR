@@ -2,7 +2,7 @@
 MINBERR is a minium-backward error Krylov solver that converges universally. 
 Given a symmetric positive semidefinite (PSD) linear system Ax=b, after k iterations (using k matrix-vector multiplications), MINBERR computes an approximate solution x_k in the Krylov subspace 
 span(b,Ab,...,A^{k-1}b) that minimizes the *backward* error, the smallest perturbation Delta A in A such that (A+Delta A)x_k=b. 
-
+$Ax=b$
 
 # MINBERR-NE 
 
