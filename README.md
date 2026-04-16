@@ -6,9 +6,9 @@ span(b,Ab,...,A^{k-1}b) that minimizes the *backward* error, the smallest pertur
 
 # MINBERR-NE 
 
-
+Typical usage: 
 ```
- jiojio this is code [Q,R] = qr(A); Anew = R*Q;
+ [x,berrhistory] = minberr(A,b,maxiter,tol)
 ``` 
 
 # Reference
