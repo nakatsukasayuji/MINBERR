@@ -66,29 +66,6 @@ for ii = 1:maxiter
                 xsol = V*scale*y;     return 
             end
 
-    %{
-    if computeberr==0 % dqds to test for convergence
-        q = bet(2:end).^2;
-        e = alp(2:end).^2;
-        tau = tol^2;
-        d = q(1)-tau;
-        for ip = 1:numel(q)-1
-            qnew(ip) = d + e(ip);
-            temp = q(ip+1)/qnew(ip);
-            enew(ip) = e(ip)*temp;
-            d = d*temp - tau;
-            if d<0 | ii == maxiter % converged or terminate
-                iter = ii;
-                % disp(['converged ii=',num2str(ii)]),
-                B = spdiags([bet(2:end)' [0 alp(2:end)]' ],[0 1],ii+1,ii+1);
-                Bt = B';                
-                y = invit_forminsvd(B,numinvit(size(B,2),delta));
-
-                scale = norm(b)^2/((b'*A)*(V*y));
-                xsol = V*scale*y;     return 
-            end
-        end
-    %}
     else % compute berr every step
         B = spdiags([bet(2:end)' [0 alp(2:end)]'],[0 1],ii+1,ii+1);
         Bt = B';
