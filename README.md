@@ -13,6 +13,6 @@ Typical usage:
 ``` 
 
 # Reference
-This project is based on the paper "Towards Universal Convergence of Backward Error  in Linear System Solvers" by Michal Derezinski, Yuji Nakatsukasa, and Elizaveta Rebrova, arXiv April 2026
+The codes implement the algorithms developed in the paper "Towards Universal Convergence of Backward Error  in Linear System Solvers" by Michal Derezinski, Yuji Nakatsukasa, and Elizaveta Rebrova, arXiv April 2026
 
 [keys]( url)
