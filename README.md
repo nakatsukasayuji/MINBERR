@@ -8,7 +8,8 @@ span(b,Ab,...,A^{k-1}b) that minimizes the *backward* error, the smallest pertur
 
 Typical usage: 
 ```
- [x,berrhistory] = minberr(A,b,maxiter,tol)
+ [x,berrhistory] = minberr(A,b,maxiter,tol); % if A is PSD
+ [x,berrhistory] = minberrNE(A,b,maxiter,tol); % if A is nonsymmetric
 ``` 
 
 # Reference
